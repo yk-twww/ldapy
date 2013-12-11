@@ -7,10 +7,10 @@ PythonによるLatent Dirichlet Allocation(LDA)の実装。パラメータ推定
 from ldapy import ldapy
 
 docs = [
-    ["aaa", "aaa", "aaa", "aaa", "bbb", "ccc"], #document1
-    ["bbb", "bbb", "bbb", "bbb", "ccc", "aaa"], #document2
-    ["ccc", "ccc", "ccc", "ccc", "aaa", "bbb"], #document3
-    ["aaa", "bbb", "ccc", "aaa", "bbb", "ccc"]  #document4  
+    ["aaa", "aaa", "aaa", "aaa", "bbb", "ccc"], #document0
+    ["bbb", "bbb", "bbb", "bbb", "ccc", "aaa"], #document1
+    ["ccc", "ccc", "ccc", "ccc", "aaa", "bbb"], #document2
+    ["aaa", "bbb", "ccc", "aaa", "bbb", "ccc"]  #document3  
 ]
 
 lda = ldapy()
@@ -24,22 +24,22 @@ p_wz = res.top_n_words()  # probability of a word being emited from a topic:  P(
 ```
 # for example, p_zd and p_wz are like this
 p_zd = [
-    [ # about document1
+    [ # about document0
         (1, 0.4),                # to topic1
         (2, 0.3333333333333333), # to topic2
         (0, 0.26666666666666666) # to topic0
     ],
-    [ # about document2
+    [ # about document1
         (2, 0.4),
         (0, 0.3333333333333333),
         (1, 0.26666666666666666)
     ],
-    [ # about document3
+    [ # about document2
         (1, 0.4666666666666667),
         (0, 0.3333333333333333),
         (2, 0.2)
     ],
-    [ # about document4
+    [ # about document3
         (2, 0.4),
         (0, 0.3333333333333333),
         (1, 0.26666666666666666)
