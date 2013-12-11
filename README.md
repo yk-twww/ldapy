@@ -18,7 +18,7 @@ lda.set(docs, topics = 3, alpha = 3.0, beta = 3.0)
 res = lda.estimate(5000)  # 5000 is number of iteration of Gibbs sampling
 
 p_zd = res.top_n_topics() # probability of a document belonging to a topic: P(z|d)
-p_wz = res.top_n_words()  # probability of a word being emited from a topic:  P(w|z)
+p_wz = res.top_n_words()  # probability of a topic emitting a word:  P(w|z)
 ```
 
 ```
