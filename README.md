@@ -1,8 +1,8 @@
-# LDA with Python
+## LDA with Python
 PythonによるLatent Dirichlet Allocation(LDA)の実装。パラメータ推定にはGibbsサンプリングを使用。
 
 
-## 使い方
+### 使い方
 ```
 from ldapy import ldapy
 
